@@ -53,7 +53,7 @@
 
      ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429761895.png)
 
-- 至此,一个简单的流水线穿件已经完成
+- 至此,一个简单的流水线已经创建完成
 
 #### 监控master分支,自动推送项目
 
@@ -66,7 +66,7 @@
   # git@gitlab.example.com:group/repository.git填写git的路径
   ```
 
-- 下面让我们在项目里面添加一个readme.txt,然后提交到master试试吧
+- 下面让我们在项目里面添加一个readme.txt,然后提交到master,jenkins会自动给你完成一次创建
 
   ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429769379.png)
 
