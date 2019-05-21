@@ -37,21 +37,21 @@
 
   1. 打开blueocean
 
-     ![](D:\Images\jenkins\打开blueocean.png)
+     ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429721786.png)
 
   2. 创建流水线
 
-     ![](D:\Images\jenkins\创建流水线.png)
+     ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429728087.png)
 
   3. 接下来创建第一个节点,保存,然后去构建
 
-     ![](D:\Images\jenkins\begining.png)
+     ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429757941.png)
 
-     ![](D:\Images\jenkins\成功第一次.png)
+     ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429752622.png)
 
   4. 去机器上验证一下,看看是否有这样的文件
 
-     ![](D:\Images\jenkins\验证.png)
+     ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429761895.png)
 
 - 至此,一个简单的流水线穿件已经完成
 
@@ -68,7 +68,7 @@
 
 - 下面让我们在项目里面添加一个readme.txt,然后提交到master试试吧
 
-  ![](D:\Images\jenkins\第二次成功的构建.png)
+  ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429769379.png)
 
   - 注意到我又一次失败的构建,是因为在shell里面echo > /root/1.txt,而jenkins是没有权限的,注意一切构建都是以"workspace/项目_分支/"为根目录的
 
