@@ -2,7 +2,7 @@
 # 安装docker,已经安装则跳过这一步
 rpm -q docker || yum -y install docker
 
-# docker的日志文件有时候会很大,而阿里云初始磁盘往往只有40G,但是可以通过以下操作更改磁盘,例如,已经将一个100G的硬盘挂在到了/opt
+# docker的日志文件有时候会很大,而阿里云初始磁盘往往只有40G,但是可以通过以下操作更改磁盘,例如,已经将一个100G的硬盘挂到了/opt
 
 # cd /var/lib
 # mv docker/* /opt/docker/
@@ -14,7 +14,7 @@ systemctl start docker
 systemctl enable docker
 
 # 下载镜像,此镜像是整合了BlueOcean和初始推荐插件的镜像
-echo '如果下载速度特别慢,请用ctrl + c中断,然后重新运行降本'
+echo '如果下载速度特别慢,请用ctrl + c中断,然后重新运行脚本'
 docker pull guiaiy/jenkins
 
 # 确认镜像下载成功
@@ -32,7 +32,7 @@ read path
 file_path=${path:-/home/jenkins}
 [[ -f ${file_path} ]] || mkdir -p ${file_path}
 
-# Jenkins可能需要有对挂在目录的操作权限
+# Jenkins可能需要有对挂载目录的操作权限
 id jenkins || useradd jenkins
 chown -R jenkins:jenkins ${file_path}
 
