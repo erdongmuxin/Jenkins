@@ -15,6 +15,23 @@
 
 #### 创建一个Django项目以便测试
 
-- Django项目同样通过docker创建,我同时为其编写了脚本
+- 首先我们利用docker安装一个Django项目
+
+  ```bash
+  # 下载镜像
+  docker pull guiaiy/django-uwsgi-nginx
+  
+  # 启动容器
+  name=django
+  file_path=/home/sd/python/dashun/app
+  port=80
+  docker run -d --name ${name} -p ${port}:80 -v ${file_path}:/home/docker/code/app django
+  
+  # 具体配置请参考容器内部/home/docker/code/README.txt,需要和开发沟通配置
+  ```
+
+- 然后将我们在jenkins创建一个多分支流水线,用来监控代码,每当master分支有合并的时候,自动将代码推送到服务器
+
+  ![创建流水线](D:\Images\jenkins\创建流水线.png)
 
   
