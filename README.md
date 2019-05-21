@@ -1,5 +1,5 @@
 # Jenkins
-> 阿里云上Jenkins相关文档,基于阿里云和docker构建自动化运维产品线
+> 阿里云上Jenkins相关文档,基于阿里云和docker构建的Django项目自动化运维产品线
 
 
 
