@@ -17,7 +17,7 @@
 
 - 通过以下小脚本利用docker安装并启动jenkins,脚本详细内容点击观看
 
-  [jenkins.sh]:https://github.com/erdongmuxin/Jenkins/blob/master/jenkins.sh
+  [jenkins.sh]:(https://github.com/erdongmuxin/Jenkins/blob/master/jenkins.sh)
   
 - 输入ip:port登录,在如下地方输入脚本给出的密码
 
