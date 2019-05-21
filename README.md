@@ -21,6 +21,6 @@
   
 - 输入ip:port登录,在如下地方输入脚本给出的密码
 
-  ![密码输入](D:\Images\jenkins\密码输入.png)
+  ![密码输入](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/erdongmuxin/1558420488683.png)
 
 - 选择插件,创建管理员用户即可愉快的使用了
