@@ -22,13 +22,13 @@
 
   ```bash
   # 下载镜像
-  docker pull guiaiy/django-uwsgi-nginx
+  docker pull guiaiy/django
   
   # 启动容器
   name=django
   file_path=/home/dashun/app
   port=80
-  docker run -d --name ${name} -p ${port}:80 -v ${file_path}:/home/docker/code/app guiaiy/django-uwsgi-nginx
+  docker run -d --name ${name} -p ${port}:80 -v ${file_path}:/home/docker/code/app guiaiy/django
   
   # 具体配置请参考容器内部/home/docker/code/README.txt,需要和开发沟通配置
   ```
