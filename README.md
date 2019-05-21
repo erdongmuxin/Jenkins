@@ -26,9 +26,9 @@
   
   # 启动容器
   name=django
-  file_path=/home/sd/python/dashun/app
+  file_path=/home/dashun/app
   port=80
-  docker run -d --name ${name} -p ${port}:80 -v ${file_path}:/home/docker/code/app django
+  docker run -d --name ${name} -p ${port}:80 -v ${file_path}:/home/docker/code/app guiaiy/django-uwsgi-nginx
   
   # 具体配置请参考容器内部/home/docker/code/README.txt,需要和开发沟通配置
   ```
