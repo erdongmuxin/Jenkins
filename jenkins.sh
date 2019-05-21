@@ -1,10 +1,20 @@
 #!/bin/bash
-# 安装,启动docker,已经安装则跳过这一步
+# 安装docker,已经安装则跳过这一步
 rpm -q docker || yum -y install docker
+
+# docker的日志文件有时候会很大,而阿里云初始磁盘往往只有40G,但是可以通过以下操作更改磁盘,例如,已经将一个100G的硬盘挂在到了/opt
+
+# cd /var/lib
+# mv docker/* /opt/docker/
+# rm -rf docker
+# ln -s /opt/docker/ /var/lib/docker
+
+# 启动docker,并设置开机自启
 systemctl start docker
 systemctl enable docker
 
-# 下载镜像
+# 下载镜像,此镜像是整合了BlueOcean和初始推荐插件的镜像
+echo '如果下载速度特别慢,请用ctrl + c中断,然后重新运行降本'
 docker pull guiaiy/jenkins
 
 # 确认镜像下载成功
@@ -13,17 +23,20 @@ do
 	docker pull guiaiy/jenkins
 done
 
-# 启动Jenkins镜像
+# 这里只用挂载目录做了自定义配置,如果需要自定义例如端口的其他配置,请自行修改
 echo '"""
 请输入jenkins的家目录,默认目录/home/jenkins
 """
 '
 read path
 file_path=${path:-/home/jenkins}
-mkdir -p ${file_path}
+[[ -f ${file_path} ]] || mkdir -p ${file_path}
 
-# Jenkins需要有对挂在目录的操作权限
+# Jenkins可能需要有对挂在目录的操作权限
+id jenkins || useradd jenkins
 chown -R jenkins:jenkins ${file_path}
+
+# 启动Jenkins镜像
 docker run -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v ${file_path}:/var/jenkins_home guiaiy/jenkins
 
 # 等待Jenkins启动一小会
