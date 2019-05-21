@@ -24,11 +24,7 @@ do
 done
 
 # 这里只用挂载目录做了自定义配置,如果需要自定义例如端口的其他配置,请自行修改
-echo '"""
-请输入jenkins的家目录,默认目录/home/jenkins
-"""
-'
-read path
+path=
 file_path=${path:-/home/jenkins}
 [[ -f ${file_path} ]] || mkdir -p ${file_path}
 
