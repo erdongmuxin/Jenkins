@@ -36,7 +36,10 @@ chown -R jenkins:jenkins ${file_path}
 docker run -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v ${file_path}:/var/jenkins_home guiaiy/jenkins
 
 # 等待Jenkins启动一小会
-sleep 10
+sleep 20
+
+# 访问网站,生成初始密码
+curl 127.0.0.1:8080
 
 # 获取初始密码
 echo '"""
