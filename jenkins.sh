@@ -28,9 +28,7 @@ path=
 file_path=${path:-/home/jenkins}
 [[ -f ${file_path} ]] || mkdir -p ${file_path}
 
-# Jenkins可能需要有对挂载目录的操作权限
-id jenkins || useradd jenkins
-chown -R jenkins:jenkins ${file_path}
+
 
 # 下载配置
 docker run -d --name jenkins guiaiy/jenkins
@@ -38,6 +36,10 @@ docker cp jenkins:/var/jenkins_home ./
 mv ./jenkins_home/* ${file_path}
 docker stop jenkins
 docker rm jenkins
+
+# Jenkins可能需要有对挂载目录的操作权限
+id jenkins || useradd jenkins
+chown -R jenkins:jenkins ${file_path}
 
 # 启动Jenkins镜像
 docker run -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v ${file_path}:/var/jenkins_home guiaiy/jenkins
