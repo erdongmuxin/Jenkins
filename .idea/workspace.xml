@@ -4,6 +4,7 @@
     <list default="true" id="efe5d64f-7b2b-4251-a5d6-fcccacf20b5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkins.sh" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jenkins.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="689">
+              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -27,7 +28,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="1575">
-                <caret line="80" selection-start-line="80" selection-end-line="80" />
+                <caret line="86" selection-start-line="86" selection-end-line="86" />
               </first_editor>
               <second_editor />
             </state>
@@ -58,10 +59,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="251" />
-    <option name="y" value="45" />
-    <option name="width" value="1408" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="782" />
+    <option name="y" value="17" />
+    <option name="width" value="1137" />
     <option name="height" value="999" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -79,6 +80,11 @@
               <item name="Jenkins" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jenkins" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Jenkins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="django" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -91,7 +97,7 @@
     <property name="last_opened_file_path" value="G:/Django" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -124,17 +130,18 @@
       <workItem from="1558423534840" duration="195000" />
       <workItem from="1558423753051" duration="2369000" />
       <workItem from="1558441329855" duration="22000" />
-      <workItem from="1558488990072" duration="3051000" />
+      <workItem from="1558488990072" duration="6067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5774000" />
+    <option name="totallyTimeSpent" value="8790000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="251" y="45" width="1408" height="999" extended-state="1" />
+    <frame x="782" y="17" width="1137" height="999" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19683908" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2544104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -166,7 +173,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1575">
-            <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <caret line="86" selection-start-line="86" selection-end-line="86" />
           </first_editor>
           <second_editor />
         </state>
@@ -181,8 +188,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jenkins.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="689">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
         </state>
       </provider>
     </entry>

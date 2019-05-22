@@ -25,6 +25,8 @@
   # 下载配置
   docker run -d --name django guiaiy/django
   docker cp django:/etc/nginx ./
+  docker stop django
+  docker rm django
   
   # 启动容器
   name=django
@@ -46,7 +48,7 @@
 
   2. 创建流水线
 
-     ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429728087.png)
+     ![](D:\Images\jenkins\创建流水线.png)
 
   3. 接下来创建第一个节点,保存,然后去构建
 
@@ -76,5 +78,13 @@
   ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429769379.png)
 
   - 注意到我有一次失败的构建,是因为在shell里面echo > /root/1.txt,而jenkins是没有权限的,注意一切构建都是以"workspace/项目_分支/"为根目录的
+  
+- 接下来,我们写一个简单的脚本,来部署Django项目
 
+  1. 我们先不改动piplines,直接合并Django项目,然后看一眼workspace
 
+     ![](D:\Images\jenkins\workspace.png)
+
+     - 可以看到的是,他不仅仅给你自动创建了一个Jenkinsfile的文件,并且把你git上的所有内容都拉取下来了
+
+  2. 
