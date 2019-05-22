@@ -13,7 +13,7 @@ rpm -q docker || yum -y install docker
 systemctl start docker
 systemctl enable docker
 
-# 下载镜像,此镜像是整合了BlueOcean和初始推荐插件的镜像
+# 下载镜像,此镜像是整合了BlueOcean的镜像
 echo '如果下载速度特别慢,请用ctrl + c中断,然后重新运行脚本'
 docker pull guiaiy/jenkins
 
@@ -39,7 +39,9 @@ docker run -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v ${f
 sleep 20
 
 # 访问网站,生成初始密码
-curl 127.0.0.1:8080
+curl -X POST --keepalive-time 10 http://127.0.0.1:8080
+sleep 30
+
 
 # 获取初始密码
 echo '"""
