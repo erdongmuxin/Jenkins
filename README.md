@@ -14,7 +14,7 @@
 
 - 选择插件,创建管理员用户即可愉快的使用了
 
-#### 创建一个Django项目以便测试
+#### 创建一个Django项目以便测试(非必须操作,知识为了以后方便)
 
 - 首先我们利用docker安装一个Django项目
 
@@ -22,16 +22,23 @@
   # 下载镜像
   docker pull guiaiy/django
   
+  # 下载配置
+  docker run -d --name django guiaiy/django
+  docker cp django:/etc/nginx ./
+  
   # 启动容器
   name=django
-  file_path=/home/dashun/app
+  file_path=/home/django
   port=80
-  docker run -d --name ${name} -p ${port}:80 -v ${file_path}:/home/docker/code/app guiaiy/django
+  mv ./nginx ${file_path}/
+  docker run -d --name ${name} -p ${port}:80 -v ${file_path}/code/app:/home/docker/code/app -v ${file_path}/nginx:/etc/nginx guiaiy/django
   
   # 具体配置请参考容器内部/home/docker/code/README.txt,需要和开发沟通配置
   ```
 
-- 然后将我们在jenkins创建一个多分支流水线,用来监控代码,每当master分支有合并的时候,自动将代码推送到服务器
+#### 创建多分支流水线
+
+- 进入jenkins,在jenkins创建一个多分支流水线,用来监控代码,每当master分支有合并的时候,自动将代码推送到服务器
 
   1. 打开blueocean
 
@@ -69,10 +76,5 @@
   ![](https://erdongmuxin.oss-cn-shenzhen.aliyuncs.com/小书匠/1558429769379.png)
 
   - 注意到我有一次失败的构建,是因为在shell里面echo > /root/1.txt,而jenkins是没有权限的,注意一切构建都是以"workspace/项目_分支/"为根目录的
-
-
-
-
-
 
 
