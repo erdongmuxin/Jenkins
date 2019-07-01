@@ -1,6 +1,6 @@
 #!/bin/bash
 # 安装docker,已经安装则跳过这一步
-rpm -q docker || yum -y install docker
+docker ps || yum -y install docker
 
 # docker的日志文件有时候会很大,而阿里云初始磁盘往往只有40G,但是可以通过以下操作更改磁盘,例如,已经将一个100G的硬盘挂到了/opt
 
