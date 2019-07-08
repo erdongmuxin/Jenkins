@@ -53,6 +53,8 @@ sleep 20
 
 # 访问网站,生成初始密码
 curl -X POST --keepalive-time 10 http://127.0.0.1:8080
+echo
+echo '请稍后...'
 sleep 30
 
 
