@@ -9,6 +9,8 @@ docker ps || yum -y install docker
 # rm -rf docker
 # ln -s /opt/docker/ /var/lib/docker
 # 以上操作请务必先关闭docker服务
+# 以上操作请务必先关闭docker服务
+# 以上操作请务必先关闭docker服务
 
 # 启动docker,并设置开机自启
 systemctl start docker
